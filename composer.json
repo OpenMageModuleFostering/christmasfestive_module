@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/christmasfestive_module",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Let your customers get the Christmas shopping experience from your online store configuring this extension!",
+    "authors": [
+    {
+        "name": "Biztech",
+        "email": "sales@biztechconsultancy.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
