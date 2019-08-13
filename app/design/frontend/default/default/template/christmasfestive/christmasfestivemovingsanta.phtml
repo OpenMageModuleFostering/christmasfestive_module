@@ -3,6 +3,10 @@ if (Mage::getStoreConfig('christmasfestive/generalconfig/active')):
     if (Mage::getStoreConfig('christmasfestive/imageconfiguration/image_active')):
 
 
+        $getspeedofmovingimage = Mage::getStoreConfig('christmasfestive/imageconfiguration/santa_moving_speed');
+        if($getspeedofmovingimage==""){
+            $getspeedofmovingimage = 8000;
+        }
         $getchristmasimagesoathsanta = Mage::getBaseUrl('media') . "christmasfestive/" . "santa/";
         $default_path = $this->getSkinUrl('christmasfestive/images/santa.gif', array('_secure' => true));
         $get_movingsanta_image = Mage::getStoreConfig('christmasfestive/imageconfiguration/image_santa_claus');
@@ -38,13 +42,14 @@ if (Mage::getStoreConfig('christmasfestive/generalconfig/active')):
 
                 function santa_animation() {
                     var santa_animatio = '<?php echo $get_movingsanta_effect; ?>';
+                    var santa_animation_speed = '<?php echo $getspeedofmovingimage; ?>';
 
                     if (santa_animatio == 'random') {
                         var h = $(document).height() - 50;
                         var w = $(document).width() - 50;
                         var nh = Math.floor(Math.random() * h);
                         var nw = Math.floor(Math.random() * w);
-                        $('#moving-santa').animate({top: nh, left: nw}, 5000, function() {
+                        $('#moving-santa').animate({top: nh, left: nw}, parseInt(santa_animation_speed), function() {
                             santa_animation();
                         });
 

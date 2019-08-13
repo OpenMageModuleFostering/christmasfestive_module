@@ -10,7 +10,7 @@
 <config>
     <modules>
         <Biztech_Christmasfestive>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </Biztech_Christmasfestive>
     </modules>
     <frontend>
@@ -145,6 +145,9 @@
                 <snowflakes_minsize>10</snowflakes_minsize>
                 <snowflakes_maxsize>50</snowflakes_maxsize>
             </snowflakesconfig>
-        </christmasfestive>
+            <imageconfiguration>
+                <santa_moving_speed>8000</santa_moving_speed>
+            </imageconfiguration>
+       </christmasfestive>
     </default>
 </config>

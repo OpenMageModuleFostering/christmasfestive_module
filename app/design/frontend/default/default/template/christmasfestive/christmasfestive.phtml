@@ -1,10 +1,25 @@
 <?php if(Mage::getStoreConfig('christmasfestive/generalconfig/active')): ?>
+    <?php
+        
+        $getchristmasimagesoathheader = Mage::getBaseUrl('media') . "christmasfestive/" . "footer/baground/";
+
+        $get_footerbg_image = Mage::getStoreConfig('christmasfestive/imageconfiguration/footer_baground');
+
+
+        if ($get_footerbg_image) {
+            $get_footerbg_image = Mage::getStoreConfig('christmasfestive/imageconfiguration/footer_baground');
+            $get_footerbg_image = $getchristmasimagesoathheader . $get_footerbg_image;
+        }else{
+            $get_footerbg_image = $this->getSkinUrl('christmasfestive/images/footerdecoration.png');
+        }
+    ?>
+
     <script type="text/javascript">
         var Snow = new Christmasfestiveflakes(<?php echo $this->getJsonOptions(); ?>);
         jQuery(document).ready(function($)
-        {
+            {
                 $('.footer-container').append('<div class="xmas_bgimage"></div>');
-
+                $('.xmas_bgimage').css("background-image","url('<?php echo $get_footerbg_image ?>')");
         })
     </script>
     <?php
@@ -25,7 +40,7 @@
         } ?>
         <script type="text/javascript">
             //<![CDATA[
-            // Let it snow, let it snow, let it snow...
+            
             jQuery(document).ready(function($)
                 {
                     function conveyorLoop() {
@@ -38,7 +53,7 @@
                     var image = $('.main-container');
                     if(bg_image){
                         image.css('background', 'url(' + bg_image +')');
-                        //$('.main-container').style.backgroundImage = "url(" + image  + ")";;
+                        
                     }
             })
             //]]>

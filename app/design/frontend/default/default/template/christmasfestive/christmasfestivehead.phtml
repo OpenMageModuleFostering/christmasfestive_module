@@ -2,6 +2,8 @@
 if (Mage::getStoreConfig('christmasfestive/generalconfig/active')):
     if (Mage::getStoreConfig('christmasfestive/imageconfiguration/image_active')):
 
+        $left_header_image = $this->getSkinUrl('christmasfestive/images/heartball.png');
+        
         $getchristmasimagesoathheader = Mage::getBaseUrl('media') . "christmasfestive/" . "header/";
         $defaultpath = Mage::getBaseUrl('media') . "christmasfestive/" . "default/";
         $get_header_image = Mage::getStoreConfig('christmasfestive/imageconfiguration/image_header');
@@ -12,16 +14,8 @@ if (Mage::getStoreConfig('christmasfestive/generalconfig/active')):
             $final_header_image = $getchristmasimagesoathheader . $get_header_image;
         }
         ?>
-       <?php /* <div id="lights-head" class="lights-head" <?php if (isset($final_header_image)) { ?> style="background-image: url(<?php echo $final_header_image ?>)" 
-             filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                 src='<?php echo $final_header_image ?>', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $final_header_image ?>',sizingMethod='scale');" <?php } ?>>
-        </div>*/ ?>
+<div id="lights-head" class="lights-head" <?php if (isset($final_header_image)) { ?> style="background-image: url(<?php echo $final_header_image ?>)" <?php } ?>>
+</div>
 
-<div id="lights-head" class="lights-head" <?php if (isset($final_header_image)) { ?> style="background-image: url(<?php echo $final_header_image ?>)" <?php } ?>></div>
     <?php endif;
 endif; ?>  
-
-
-
-
-
