@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 You can now drench your customers with festive fever every time new festival arrives configuring Magento Festive Season Extension. 
