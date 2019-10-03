@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/christmasfestive_module",
+    "name": "OpenMageModuleFostering\/christmasfestive_module",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "You can now drench your customers with festive fever every time new festival arrives configuring Magento Festive Season Extension. ",
     "authors": [
-    {
-        "name": "Biztech",
-        "email": "sales@biztechconsultancy.com"
-    }
-],
+        {
+            "name": "Biztech",
+            "email": "sales@biztechconsultancy.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
